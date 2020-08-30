@@ -2,8 +2,8 @@
   <div id="app">
 
     <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a href="#" class="brand-logo center">Produtos Front</a>
+      <div class="nav-wrapper dark darken-1">
+        <a href="#" class="brand-logo center">Leonardo Flix</a>
       </div>
     </nav>
 
@@ -11,12 +11,14 @@
 
       <form>
 
-          <label>Nome</label>
-          <input type="text" placeholder="Nome">
-          <label>Quantidade</label>
-          <input type="number" placeholder="QTD">
-          <label>Valor</label>
-          <input type="text" placeholder="Valor">
+          <label>Titulo</label>
+          <input type="text" placeholder="titulo">
+          <label>Diretor</label>
+          <input type="text" placeholder="direto">
+          <label>Sinopse</label>
+          <input type="textarea" placeholder="sinopse">
+          <label>Ano</label>
+          <input type="number" placeholder="Ano">
 
           <button class="waves-effect waves-light btn-small">Salvar<i class="material-icons left">save</i></button>
 
