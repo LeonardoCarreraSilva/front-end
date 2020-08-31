@@ -39,7 +39,6 @@
             <th>OPÇÕES</th>
           </tr>
         </thead>
-        {{filme.idfilme}}
         <tbody>
           <tr v-for="filme of filmes" :key="filme.idfilme">
             <td>{{filme.titulo}}</td>
@@ -66,6 +65,7 @@
 import Filme from "./services/filme";
 import Genero from "./services/genero";
 export default {
+  name: `app`,
   data() {
     return {
       filme: {
@@ -100,18 +100,18 @@ export default {
     },
 
     salvarFilme() {
-      var resp;
       
       if(!this.filme.idFilme){
-        Filme.salvar(this.filme).then(resposta =>{
-          resp = resposta.titulo
+      var resp
+        Filme.salvar(this.filme).then(() =>{
+          resp = this.filme.titulo
           alert(resp + ' foi salvo com sucesso!')
           this.filme ={}
           this.listarFilmes()
         })
       }else{
-        Filme.atualizar(this.filme).then(resposta =>{
-          resp = resposta.titulo
+        Filme.atualizar(this.filme).then(() =>{
+          resp = this.filme.titulo
           alert(resp + ' foi atualizado com sucesso!')
           this.filme ={}
           this.listarFilmes()
